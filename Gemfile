@@ -2,6 +2,10 @@ source "https://rubygems.org"
 
 ruby "3.0.6"
 
+# slimの利用
+gem "slim-rails"
+gem "html2slim"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 
