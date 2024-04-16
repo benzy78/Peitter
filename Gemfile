@@ -2,6 +2,9 @@ source "https://rubygems.org"
 
 ruby "3.0.6"
 
+# sassの利用
+gem "sassc"
+
 # slimの利用
 gem "slim-rails"
 gem "html2slim"
