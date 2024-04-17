@@ -11,6 +11,7 @@ table.table-index
      -@posts.each do |post|
       tr 
         td = link_to post.name, post_path(post)
-        td =post.description
+        td = post.description
         td = post.created_at
+        td = link_to "編集", edit_post_path(post)
 

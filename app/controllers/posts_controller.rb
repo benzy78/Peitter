@@ -18,6 +18,13 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:id])
+  end
+
+  def  update
+    post = Post.find(params[:id])
+    post.update!(post_params)
+    redirect_to posts_url, notice: "更新されました。"
   end
 
   # Strong Parameters : 不正なデータの登録・更新を防ぐ処理
