@@ -27,6 +27,12 @@ class PostsController < ApplicationController
     redirect_to posts_url, notice: "更新されました。"
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    redirect_to posts_url, notice: "#{post.name}を削除しました。"
+  end
+
   # Strong Parameters : 不正なデータの登録・更新を防ぐ処理
   private
   def post_params

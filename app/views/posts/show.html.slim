@@ -20,4 +20,6 @@ table.table-show
       td = @post.updated_at
     tr 
       td = link_to "編集", edit_post_path(@post)
+    tr 
+      td = button_to "削除", @post, method: :delete, data: {confirm: '削除してよろしいですか？' }
   

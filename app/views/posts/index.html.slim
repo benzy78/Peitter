@@ -14,4 +14,5 @@ table.table-index
         td = post.description
         td = post.created_at
         td = link_to "編集", edit_post_path(post)
+        td = button_to "削除", post, method: :delete, data: {confirm: '削除してよろしいですか？' }
 
