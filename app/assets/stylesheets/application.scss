@@ -2,3 +2,41 @@
  *= require_tree 
  *= require_self
  */
+
+ body{
+  font-size:16px;
+  color:#363636;
+  box-sizing: border-box;
+  font-family: Helvetica, 'Yu Gothic', YuGothic, HiraKakuProN-W3, Meiryo, sans-serif;
+  margin: 0;
+}
+
+li{
+  list-style: none;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+
+}
+
+a{
+  
+}
+
+.mb50{
+  margin-bottom: 50px;
+}
+
+.wrapper{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+.post{
+  border: 1px solid #363636;
+  margin-bottom: 30px;
+  padding: 30px;
+}
