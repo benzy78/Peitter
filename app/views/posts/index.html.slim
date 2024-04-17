@@ -10,7 +10,7 @@ table.table-index
   tbody 
      -@posts.each do |post|
       tr 
-        td =post.name
+        td = link_to post.name, post_path(post)
         td =post.description
         td = post.created_at
 
