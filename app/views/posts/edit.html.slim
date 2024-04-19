@@ -1,4 +1,8 @@
-h1 編集
-= render "form", post:@post
-= link_to "投稿一覧", posts_path
-= link_to "投稿詳細", @post
+header.header 
+  .wrapper 
+    h1 編集
+.edit 
+  .wrapper
+    = render "form", post:@post
+    = link_to "投稿一覧", posts_path, class:"edit-to-index"
+    = link_to "投稿詳細", @post, class:"edit-to-show"

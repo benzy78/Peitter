@@ -1,8 +1,11 @@
-= form_with model:@post, local:true do |form|
-  .form-name
-    = form.label :タイトル
-    = form.text_field :name
-  .form-textarea
-    = form.label :本文
-    = form.text_area :description
-  = form.submit nil, value:"投稿"
+.form 
+  .wrapper 
+    = form_with model:@post, local:true do |form|
+      .form-name
+        = form.label :タイトル
+        = form.text_field :name
+      .form-textarea
+        = form.label :本文　　
+        = form.text_area :description
+      .form-submit
+        = form.submit nil, value:"投稿"

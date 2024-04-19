@@ -1,6 +1,7 @@
-div.wrapper
-  h1 投稿一覧
-  =link_to "新規投稿", new_post_path
+header.header.header-index
+  div.wrapper
+    h1 投稿一覧
+    =link_to "新規投稿", new_post_path, class:"add-post"
 
 section.posts-index
   div.wrapper
@@ -14,5 +15,5 @@ section.posts-index
           = post.created_at
         p.post-edit 
           = link_to "編集", edit_post_path(post)
-        p.post-delete 
+        .post-delete
           = button_to "削除", post, method: :delete, data: {confirm: '削除してよろしいですか？' }
