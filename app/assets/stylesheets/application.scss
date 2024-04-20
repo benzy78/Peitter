@@ -42,6 +42,11 @@ a{
   padding:0 20px;
 }
 
+.notice{
+  color: green;
+  font-weight: bold;
+}
+
 .header{
   background-color: #f7f7f7;
   padding: 15px;
@@ -50,6 +55,27 @@ a{
   h1{
     font-size: 24px;
   }
+}
+
+.alert-success{
+  color: green;
+  background-color: rgba(0,255,0,0.2);
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+// エラーメッセージ
+#error_explanation{
+  li{
+    color: $delete-color;
+    background-color: rgba(255,0,0,0.2) ;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+.field_with_errors{
+  display: inline;
 }
 
 // index
@@ -152,13 +178,12 @@ a{
       border: 1px solid $add-color;
       border-radius: 3px;
       color: $add-color;
-      font-weight: bold;
+      font-size: 16px;
       &:hover{
         cursor: pointer;
         opacity: 0.7;
       }
     }
-    
   }
 
 }

@@ -5,6 +5,9 @@ header.header.header-index
 
 section.posts-index
   div.wrapper
+    - if flash.notice.present?
+      p.alert.alert-success = flash.notice 
+    =yield
     - @posts.each do |post|
       article.post
         h3.post-title
