@@ -19,4 +19,4 @@ section.posts-index
         p.post-edit 
           = link_to "編集", edit_post_path(post)
         .post-delete
-          = button_to "削除", post, method: :delete, data: {confirm: '削除してよろしいですか？' }
+          = button_to "削除", post, data: {turbo_method: :delete, turbo_confirm: '削除してよろしいですか？' }
