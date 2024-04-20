@@ -1,25 +1,30 @@
-h1 投稿詳細
-= link_to "投稿一覧", posts_path
+header.header
+  .wrapper 
+    h1 投稿詳細
 
-table.table-show 
-  tbody
-    tr 
-      th ID
-      td = @post.id
-    tr 
-      th タイトル
-      td = @post.name
-    tr 
-      th 本文
-      td = @post.description
-    tr 
-      th 投稿日
-      td = @post.created_at
-    tr 
-      th 更新日
-      td = @post.updated_at
-    tr 
-      td = link_to "編集", edit_post_path(@post)
-    tr 
-      td = button_to "削除", @post, method: :delete, data: {confirm: '削除してよろしいですか？' }
-  
+section.show 
+  .wrapper 
+    table.table-show 
+      tbody
+        tr 
+          th ID
+          td = @post.id
+        tr 
+          th タイトル
+          td = @post.name
+        tr 
+          th 本文
+          td = @post.description
+        tr 
+          th 投稿日
+          td = @post.created_at
+        tr 
+          th 更新日
+          td = @post.updated_at
+        tr 
+          td = link_to "編集", edit_post_path(@post), class:"show-to-edit"
+        tr 
+          td = button_to "削除", @post, method: :delete, data: {confirm: '削除してよろしいですか？' },class:"show-delete"
+        tr 
+          td = link_to "投稿一覧", posts_path, class:"show-to-index"
+      
