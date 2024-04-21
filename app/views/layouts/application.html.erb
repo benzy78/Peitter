@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
+    <header class="header">
+      <div class="wrapper">
+        <h1><%=link_to "Peitter", posts_path, class:"logo"%></h1>
+      </div>
+    </header>
     <%= yield %>
+    <footer class="footer">
+      <div class="wrapper">
+        <p>copylight penpy</p>
+      </div>
+    </footer>
   </body>
 </html>
