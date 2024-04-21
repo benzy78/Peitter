@@ -18,7 +18,6 @@ section.posts-index
             = post.description
           p.post-created-at
             = post.created_at
-          p.post-edit.btn 
-            = link_to "編集", edit_post_path(post)
+          = link_to "編集", edit_post_path(post), class:"btn post-edit"
           .post-delete
             = button_to "削除", post, method: :delete, data:{turbo_confirm:"削除してよろしいですか？"}, class: "btn"
