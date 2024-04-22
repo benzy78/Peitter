@@ -1,8 +1,8 @@
-header.header 
+section.sub-title
   .wrapper 
-    h1 編集
-.edit 
+    h2 編集
+section.edit 
   .wrapper
     = render "form", post:@post
-    = link_to "投稿一覧", posts_path, class:"edit-to-index"
-    = link_to "投稿詳細", @post, class:"edit-to-show"
+    = link_to "投稿一覧", posts_path, class:"edit-to-index btn"
+    = link_to "投稿詳細", @post, class:"edit-to-show btn"

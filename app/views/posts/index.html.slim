@@ -1,7 +1,8 @@
-header.header.header-index
+
+section.sub-title 
   div.wrapper
-    h1 投稿一覧
-    =link_to "新規投稿", new_post_path, class:"add-post"
+    h2 投稿一覧
+    =link_to "新規投稿", new_post_path, class:"add-post btn"
 
 section.posts-index
   div.wrapper
@@ -10,13 +11,13 @@ section.posts-index
     =yield
     - @posts.each do |post|
       article.post
-        h3.post-title
-          = link_to post.name, post_path(post)
-        p.post-body 
-          = post.description
-        p.post-created-at
-          = post.created_at
-        p.post-edit 
-          = link_to "編集", edit_post_path(post)
-        .post-delete
-          = button_to "削除", post, method: :delete, data: {confirm: '削除してよろしいですか？' }
+        =link_to post_path(post)
+          h3.post-title
+            = post.name
+          p.post-body 
+            = post.description
+          p.post-created-at
+            = post.created_at
+          = link_to "編集", edit_post_path(post), class:"btn post-edit"
+          .post-delete
+            = button_to "削除", post, method: :delete, data:{turbo_confirm:"削除してよろしいですか？"}, class: "btn"

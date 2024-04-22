@@ -1,9 +1,10 @@
-header.header 
+section.sub-title
   .wrapper
-    h1 新規投稿
+    h2 新規投稿
 
-.wrapper
-  = render "form", post:@post
+section.new
+  .wrapper
+    = render "form", post:@post
 
-.wrapper 
-  = link_to "投稿一覧", posts_path, class:"new-to-index"
+  .wrapper 
+    = link_to "投稿一覧", posts_path, class:"new-to-index btn"

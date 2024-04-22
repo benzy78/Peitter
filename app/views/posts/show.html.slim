@@ -1,14 +1,11 @@
-header.header
+section.sub-title
   .wrapper 
-    h1 投稿詳細
+    h2 投稿詳細
 
 section.show 
   .wrapper 
     table.table-show 
       tbody
-        tr 
-          th ID
-          td = @post.id
         tr 
           th タイトル
           td = @post.name
@@ -21,10 +18,9 @@ section.show
         tr 
           th 更新日
           td = @post.updated_at
-        tr 
-          td = link_to "編集", edit_post_path(@post), class:"show-to-edit"
-        tr 
-          td = button_to "削除", @post, method: :delete, data: {confirm: '削除してよろしいですか？' },class:"show-delete"
-        tr 
-          td = link_to "投稿一覧", posts_path, class:"show-to-index"
+    
+    ul.show-btns 
+      li = link_to "編集", edit_post_path(@post), class:"show-to-edit btn"
+      li = button_to "削除", @post, method: :delete, data:{turbo_confirm:"削除してよろしいですか？"},class:"show-delete btn"
+      li = link_to "投稿一覧", posts_path, class:"show-to-index btn"
       
