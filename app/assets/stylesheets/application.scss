@@ -23,7 +23,10 @@ li{
 ul{
   margin: 0;
   padding: 0;
+}
 
+p{
+  margin: 0;
 }
 
 a{
@@ -93,20 +96,42 @@ h2{
 //header
 .header{
   background-color: $main-color;
-  padding: 30px;
   margin-bottom: 50px;
 
-  h1{
-    font-size: 24px;
-    .logo{
-      color: #fff;
+  .wrapper{
+    display: flex;
+    justify-content: space-between;
+    h1{
+      font-size: 24px;
+      .logo{
+        color: #fff;
+        display: block;
+      }
+    }
+    .navbar{
+      display: flex;
+      .nav-item{
+        a{
+          color: #fff;
+          font-weight: bold;
+          padding: 20px;
+          height: fit-content;
+          display: block;
+          border-left:1px solid #fff;
+          border-right: 1px solid #fff;
+          &:hover{
+            box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.35);
+          }
+        }
+      }
     }
   }
+
 }
 
 // footer
 .footer{
-  padding: 30px;
+  padding: 20px;
   background-color: $main-color;
   color:#fff;
 }
