@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :users
+  end
   
   # ルートパスアクセス時にタスク一覧を表示
   root to:"posts#index" 

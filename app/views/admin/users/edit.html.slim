@@ -1,0 +1,8 @@
+section.sub-title 
+  .wrapper
+    h2 ユーザーの編集
+
+section 
+  .wrapper 
+    =link_to "投稿一覧", admin_users_path,class:"btn"
+    = render partial: "form", local:{user:@user}
