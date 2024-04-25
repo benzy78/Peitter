@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
+
+  namespace :admin do
+    resources :users
+  end
   
   # ルートパスアクセス時にタスク一覧を表示
   root to:"posts#index" 
