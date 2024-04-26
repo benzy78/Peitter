@@ -2,14 +2,17 @@ section.sub-title
   .wrapper
     h2 ログイン
 
-section 
+section.login 
   .wrapper 
+    - if flash.notice.present?
+      p.alert.alert-success = flash.notice 
+    =yield
     = form_with scope: :session, local: true do |form|
-      .form-group 
+      .form-text-field 
         = form.label :email, "メールアドレス"
         = form.text_field :email, id: "session_email"
-      .form-group 
+      .form-text-field
         = form.label :password, "パスワード"
         = form.password_field :password, id:"session_password"
       .form-submit 
-        = form.submit value:"ログインする", class:"btn"
+        = form.submit value:"ログインする", class:"btn btn-green mb50"

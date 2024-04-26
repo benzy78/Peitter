@@ -2,6 +2,9 @@ source "https://rubygems.org"
 
 ruby "3.0.6"
 
+#sass
+gem "sass-rails"
+
 # sassの利用
 gem "sassc"
 

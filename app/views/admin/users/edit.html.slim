@@ -2,7 +2,7 @@ section.sub-title
   .wrapper
     h2 ユーザーの編集
 
-section 
+section.user-edit 
   .wrapper 
-    =link_to "投稿一覧", admin_users_path,class:"btn"
+    =link_to "投稿一覧", admin_users_path,class:"btn btn-mono btn-index"
     = render partial: "form", local:{user:@user}
