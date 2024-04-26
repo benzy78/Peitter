@@ -2,9 +2,9 @@ section.sub-title
   .wrapper
     h2 ユーザーの詳細
 
-section 
+section.user-show 
   .wrapper 
-    =link_to "投稿一覧", admin_users_path,class:"btn"
+    =link_to "投稿一覧", admin_users_path,class:"btn btn-mono btn-index"
     table 
       tbody 
         tr 
@@ -25,5 +25,5 @@ section
         tr 
           th = User.human_attribute_name(:updated_at)
           td = @user.updated_at
-    = link_to "編集", edit_admin_user_path, class:"btn"
-    = link_to "削除", [:admin, @user], method: :delete, data:{turbo_confirm:"ユーザー#{@user.name}を削除します。よろしいですか？"} class:"btn"
+    = link_to "編集", edit_admin_user_path, class:"btn btn-mono btn-edit"
+    = link_to "削除", [:admin, @user], method: :delete, data: {turbo_confirm: "ユーザー#{@user.name}を削除します。よろしいですか？"}, class:"btn btn-delete"

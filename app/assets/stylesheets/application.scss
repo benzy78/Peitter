@@ -4,9 +4,15 @@
  */
 
 
+
 $main-color:#228b22;
 $accent-color:red;
 $base-color: #363636;
+
+*{
+  margin: 0;
+  padding: 0;
+}
 
  body{
   font-size:16px;
@@ -38,9 +44,7 @@ h2{
   margin: 0;
 }
 
-.mb50{
-  margin-bottom: 50px;
-}
+
 
 .wrapper{
   max-width:1100px;
@@ -61,7 +65,9 @@ h2{
 }
 
 
+
 // モジュール
+// ボタン
 .btn {
   max-width: 100px;
   width: 100%;
@@ -77,6 +83,40 @@ h2{
   }
 }
 
+.btn-green{
+  background-color: #fff;
+  border: 1px solid $main-color;
+  color: $main-color;
+}
+
+.btn-mono{
+  border: 1px solid #363636;
+}
+
+.btn-delete{
+  border: 1px solid $accent-color;
+  background-color: #fff;
+  color: $accent-color;
+}
+
+// text_fieldフォーム
+.form-text-field{
+  margin-bottom: 30px;
+  label{
+    font-size: 16px;
+    padding-right: 15px;
+    display: block;
+  }
+  input{
+    max-width: 300px;
+    width: 100%;
+    display: block;
+  }
+}
+
+.mb50{
+  margin-bottom: 50px;
+}
 
 // エラーメッセージ
 #error_explanation{
@@ -106,6 +146,7 @@ h2{
       .logo{
         color: #fff;
         display: block;
+        padding: 20px;
       }
     }
     .navbar{
@@ -165,6 +206,16 @@ h2{
     border-radius:3px;
     &:hover{
       box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.35);
+    }
+
+    .post-title{
+      margin-bottom: 15px;
+    }
+    .post-body{
+      margin-bottom: 15px;
+    }
+    .post-created-at{
+      margin-bottom: 15px;
     }
     .post-edit{
       border: 1px solid $base-color;
@@ -261,6 +312,53 @@ h2{
   }
   .show-to-index{
     border: 1px solid #363636;
+    margin-bottom: 30px;
+  }
+}
+
+
+// user_new
+.form-check{
+  margin-bottom: 30px;
+}
+
+// user_index
+.user-index{
+  margin-bottom: 50px;
+  .btn-new{
+    margin-bottom: 30px;
+  }
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    th,td{
+      border: 1px solid $base-color;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    .btn-edit{
+      margin-bottom: 15px;
+    }
+  }
+}
+
+// user_show
+.user-show{
+  margin-bottom: 50px;
+  .btn-index{
+    margin-bottom: 30px;
+  }
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    th,td{
+      border: 1px solid $base-color;
+      padding: 10px;
+    }
+  }
+  .btn-edit{
     margin-bottom: 30px;
   }
 }
