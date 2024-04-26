@@ -4,12 +4,12 @@ class Admin::UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user.params)
+    @user = User.new(user_params)
 
     if @user.save
-      redirect_to admin_user_url(@post), notice: "ユーザー#{@user.name}を登録しました"
+      redirect_to admin_user_url(@user), notice: "ユーザー#{@user.name}を登録しました"
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -43,7 +43,7 @@ class Admin::UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :email, admin, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :admin, :password, :password_confirmation)
   end
 
   def require_admin

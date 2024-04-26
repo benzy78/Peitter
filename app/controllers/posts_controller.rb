@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_url, notice: "#{@post.name}が投稿されました。"
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
 
   end

@@ -4,23 +4,4 @@ section.sub-title
 
 section.user-form.mb50  
   .wrapper 
-    = form_with model: [:admin, @user], local: true do |form|
-      .form-text-field
-        = form.label :name, "名前"
-        = form.text_field :name
-      .form-text-field
-        = form.label :email, "メールアドレス"
-        = form.text_field :email
-      .form-check 
-        = form.label :admin, class:"" do 
-          = form.check_box :admin, class:""
-          | 管理者権限
-      .form-text-field
-        = form.label :password, "パスワード"
-        = form.password_field :passsword, class:""
-      .form-text-field
-        = form.label :password_confirmation, "パスワード（確認）"
-        = form.password_field :passsword_confirmation, class:""
-      .form-submit
-        = form.submit nil, value:"登録する", class:"btn btn-green"
-
+    = render partial: "form", locals: { user: @user}
