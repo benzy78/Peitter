@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
   end
 
   def new
@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params.merge(user_id: current_user.id))
+    @post = current_user.posts.new(post_params)
     if @post.save
       redirect_to posts_url, notice: "#{@post.name}が投稿されました。"
     else
@@ -22,17 +22,17 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
   end
 
   def  update
-    post = Post.find(params[:id])
+    post = current_user.posts.find(params[:id])
     post.update!(post_params)
     redirect_to posts_url, notice: "更新されました。"
   end
 
   def destroy
-    post = Post.find(params[:id])
+    post = current_user.posts.find(params[:id])
     post.destroy
     redirect_to posts_url, notice: "#{post.name}を削除しました。"
   end
